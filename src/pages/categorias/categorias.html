@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Página Inicial</ion-title>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let n of posts">
+
+    <ion-item >
+      <ion-avatar item-start>
+        <img src="{{n.foto}}">
+      </ion-avatar>
+      <h2>{{n.name}}</h2>
+    </ion-item>
+    <h3 text-center>{{n.titulo}}</h3>
+    <img src="{{n.image}}">
+  
+    <ion-card-content>
+      
+      <p>{{n.texto}}</p>
+    </ion-card-content>
+  
+    <ion-row>
+       <ion-col text-center>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>Likes</div>
+        </button>
+      </ion-col>
+       <ion-col text-center>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>Comments</div>
+        </button>
+      </ion-col>
+       <ion-col text-center>
+        <button ion-button icon-start clear small>
+          <ion-icon name="md-share-alt"></ion-icon>
+          <div>Share</div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-list>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="https://www.ziglar.com/wp-content/uploads/2016/09/michelle-prince-profile-img.png">
+                </ion-avatar>
+                <ion-input type="text" placeholder="Digite seu comentário"></ion-input>
+              </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>  
+  </ion-card>
+</ion-content>
